@@ -53,7 +53,7 @@ Free HTML CSS Template
         <div class="hero-decoration" id="cuadradito"></div>
         <div class="hero-content">
             <h1>Lucifer Sam</h1>
-            <p class="subtitle">Veterinaria especializada</p>
+            <p class="subtitle">Veterinaria especializada y refugio de animales</p>
             <a href="#about" class="cta-button">EXPLORE</a>
         </div>
     </section>
@@ -86,14 +86,16 @@ Free HTML CSS Template
 
                 <div class="philosophy-content">
                     <div class="philosophy-main">
-                        <p class="lead-text">We believe in the power of reduction. Every line, every space, every
-                            element serves a purpose in our pursuit of essential beauty.</p>
+                        <p class="lead-text">Creemos que todo animal merece una oportunidad de tener una vida feliz
+                            y en familia
+                        </p>
 
                         <div class="philosophy-points">
                             <div class="point-item">
                                 <span class="point-number">01</span>
-                                <h4>Clarity First</h4>
-                                <p>Strip away complexity to reveal truth</p>
+                                <h4>Cuidado</h4>
+                                <p>Tanto si es como para una revisión o una animal rescatado, damos el mejor de los
+                                    cuidados</p>
                             </div>
                             <div class="point-item">
                                 <span class="point-number">02</span>
@@ -112,6 +114,8 @@ Free HTML CSS Template
                     </div>
                 </div>
             </div>
+
+
 
             <!-- Process Timeline -->
             <div class="process-timeline fade-in">
@@ -149,107 +153,186 @@ Free HTML CSS Template
                 </div>
             </div>
 
+            <div class="black-line"></div>
 
-            <!-- Section 3: Services - Asymmetric Grid -->
-            <section id="services" class="services">
+            <!-- Section compra-->
+            <section id="adopcion-accesorios" class="adopcion-accesorios">
                 <div class="container">
-                    <div class="services-header fade-in">
-                        <h2>What We Do</h2>
+                    <div class="header-adopcion fade-in">
+                        <h2>🐶 Adopta y Equipa a tu Mejor Amigo 🐈</h2>
+                        <p>
+                            En nuestra misión, la adopción es el primer paso. El proceso es simple:
+                        </p>
+                        <ol>
+                            <li>Conoce a Nuestros Animales: Revisa la lista de los animales disponibles para
+                                encontrar a tu compañero ideal.</li>
+                            <li>Formulario de Interés: Selecciona el animal deseado en el formulario de abajo para
+                                ver sus detalles (edad y sexo).</li>
+                            <li>Prepara su Hogar: Una vez confirmada tu solicitud, te ayudamos a elegir los
+                                accesorios esenciales para su llegada.</li>
+                        </ol>
+                        <p>
+                            ¡Cada adopción salva una vida y nos ayuda a continuar nuestra labor!
+                        </p>
                     </div>
 
-                    <div class="asymmetric-grid fade-in">
-                        <div class="service-large">
-                            <h3>Brand Identity</h3>
-                            <p>Creating distinctive visual languages that communicate your essence through simplicity.
-                                We
-                                develop comprehensive brand systems that stand the test of time.</p>
-                            <a href="#contact" class="service-tag">View Work</a>
-                        </div>
-                        <div class="service-small">
-                            <div class="service-number">01</div>
-                            <h4>Strategy First</h4>
-                        </div>
-                    </div>
+                    <div class="adopcion-grid">
 
-                    <div class="asymmetric-grid reverse fade-in">
-                        <div class="service-small">
-                            <div class="service-number">02</div>
-                            <h4>Digital Native</h4>
-                        </div>
-                        <div class="service-large">
-                            <h3>Web Design</h3>
-                            <p>Crafting digital experiences that prioritize clarity and usability. Every pixel serves a
-                                purpose
-                                in our pursuit of functional beauty.</p>
-                            <a href="#contact" class="service-tag">Explore</a>
-                        </div>
-                    </div>
-
-                    <div class="asymmetric-grid fade-in">
-                        <div class="service-large">
-                            <h3>Art Direction</h3>
-                            <p>Guiding visual narratives with restraint and intention. We believe the most powerful
-                                statements
-                                are often the quietest ones.</p>
-                            <a href="#contact" class="service-tag">Discover</a>
-                        </div>
-                        <div class="service-small">
-                            <div class="service-number">03</div>
-                            <h4>Vision Focused</h4>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 4: Contact -->
-            <section id="contact" class="contact">
-                <div class="container">
-                    <div class="contact-grid fade-in">
-                        <div class="contact-info">
-                            <h2>Connect</h2>
-                            <div class="info-item">
-                                <h4>Email</h4>
-                                <p>hello@minimal.com</p>
-                            </div>
-                            <div class="info-item">
-                                <h4>Phone</h4>
-                                <p>+1 234 567 890</p>
-                            </div>
-                            <div class="info-item">
-                                <h4>Location</h4>
-                                <p>Carrera Blanca, Skyrim</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-divider"></div>
-
-                        <div class="contact-form">
-                            <form>
+                        <div class="form-card fade-in">
+                            <h3>1. ¡Elige a tu Mascota!</h3>
+                            <form id="adoption-form">
                                 <div class="form-group">
-                                    <input type="text" placeholder=" " required>
-                                    <label>Name</label>
+                                    <label for="animal-select">Animales Disponibles:</label>
+                                    <select id="animal-select" name="animal" required onchange="showAnimalDetails()">
+                                        <option value="" disabled selected>Selecciona un animal</option>
+                                        <option value="perro-max" data-age="2 años" data-gender="Macho">Max (Perro)
+                                        </option>
+                                        <option value="gato-luna" data-age="4 meses" data-gender="Hembra">Luna (Gato)
+                                        </option>
+                                        <option value="conejo-saltarin" data-age="1 año" data-gender="Macho">Saltarín
+                                            (Conejo)</option>
+                                    </select>
                                 </div>
+
+                                <div id="animal-details" class="details-box">
+                                    <p>Edad: <span id="animal-age">--</span></p>
+                                    <p>Sexo: <span id="animal-gender">--</span></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="form-card fade-in">
+                            <h3>2. Accesorios Esenciales</h3>
+                            <form id="accessories-form">
                                 <div class="form-group">
-                                    <input type="email" placeholder=" " required>
-                                    <label>Email</label>
+                                    <label for="accessory-select">Accesorios Disponibles:</label>
+                                    <select id="accessory-select" name="accessory" required
+                                        onchange="showAccessoryDetails()">
+                                        <option value="" disabled selected>Selecciona un accesorio</option>
+                                        <option value="collar-lujo" data-price="$25.00">Collar de Lujo</option>
+                                        <option value="cama-suave" data-price="$40.50">Cama Suave Grande</option>
+                                        <option value="juguete-pelota" data-price="$5.99">Pelota Interactiva</option>
+                                    </select>
                                 </div>
-                                <div class="form-group">
-                                    <textarea rows="4" placeholder=" " required></textarea>
-                                    <label>Message</label>
+
+                                <div id="accessory-details" class="details-box">
+                                    <p>Precio: <span id="accessory-price">--</span></p>
                                 </div>
-                                <button type="submit" class="submit-btn">Send</button>
                             </form>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <!-- Footer -->
-            <footer>
-                <p>© 2025 Minimal Studio — Designed by <a href="https://www.tooplate.com" target="_blank"
-                        rel="nofollow noopener" style="color: #009aff; font-weight: 700;">Tooplate</a></p>
-            </footer>
-            <script src="tooplate-minimal-script.js"></script>
+                    <div class="submit-action fade-in">
+                        <p>Presiona enviar para confirmar tu interés en la adopción y los accesorios seleccionados.</p>
+                        <button type="submit" form="adoption-form accessory-form" class="submit-button">Enviar
+                            Solicitud</button>
+                    </div>
+
+                </div>
+
+                <!-- Section 3: Services - Asymmetric Grid -->
+                <section id="services" class="services">
+                    <div class="container">
+                        <div class="services-header fade-in">
+                            <h2>What We Do</h2>
+                        </div>
+
+                        <div class="asymmetric-grid fade-in">
+                            <div class="service-large">
+                                <h3>Brand Identity</h3>
+                                <p>Creating distinctive visual languages that communicate your essence through
+                                    simplicity.
+                                    We
+                                    develop comprehensive brand systems that stand the test of time.</p>
+                                <a href="#contact" class="service-tag">View Work</a>
+                            </div>
+                            <div class="service-small">
+                                <div class="service-number">01</div>
+                                <h4>Strategy First</h4>
+                            </div>
+                        </div>
+
+                        <div class="asymmetric-grid reverse fade-in">
+                            <div class="service-small">
+                                <div class="service-number">02</div>
+                                <h4>Digital Native</h4>
+                            </div>
+                            <div class="service-large">
+                                <h3>Web Design</h3>
+                                <p>Crafting digital experiences that prioritize clarity and usability. Every pixel
+                                    serves a
+                                    purpose
+                                    in our pursuit of functional beauty.</p>
+                                <a href="#contact" class="service-tag">Explore</a>
+                            </div>
+                        </div>
+
+                        <div class="asymmetric-grid fade-in">
+                            <div class="service-large">
+                                <h3>Art Direction</h3>
+                                <p>Guiding visual narratives with restraint and intention. We believe the most
+                                    powerful
+                                    statements
+                                    are often the quietest ones.</p>
+                                <a href="#contact" class="service-tag">Discover</a>
+                            </div>
+                            <div class="service-small">
+                                <div class="service-number">03</div>
+                                <h4>Vision Focused</h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4: Contact -->
+                <section id="contact" class="contact">
+                    <div class="container">
+                        <div class="contact-grid fade-in">
+                            <div class="contact-info">
+                                <h2>Connect</h2>
+                                <div class="info-item">
+                                    <h4>Email</h4>
+                                    <p>hello@minimal.com</p>
+                                </div>
+                                <div class="info-item">
+                                    <h4>Phone</h4>
+                                    <p>+1 234 567 890</p>
+                                </div>
+                                <div class="info-item">
+                                    <h4>Location</h4>
+                                    <p>Carrera Blanca, Skyrim</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-divider"></div>
+
+                            <div class="contact-form">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" placeholder=" " required>
+                                        <label>Name</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" placeholder=" " required>
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea rows="4" placeholder=" " required></textarea>
+                                        <label>Message</label>
+                                    </div>
+                                    <button type="submit" class="submit-btn">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer>
+                    <p>© 2025 Minimal Studio — Designed by <a href="https://www.tooplate.com" target="_blank"
+                            rel="nofollow noopener" style="color: #009aff; font-weight: 700;">Tooplate</a></p>
+                </footer>
+                <script src="tooplate-minimal-script.js"></script>
 </body>
 
 </html>

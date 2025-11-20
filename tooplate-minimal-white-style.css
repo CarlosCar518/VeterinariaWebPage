@@ -364,12 +364,12 @@ nav.scrolled {
     width: 70px;
     /* Tamaño del gatito */
     height: 70px;
-    opacity: 0.25;
+    opacity: 0.5;
     /* Un poco más visible que los otros elementos */
 
     /* Aquí iría el SVG de la cara del gatito o la ruta a tu imagen */
     /* Ejemplo con un SVG simple (puedes reemplazarlo con el tuyo) */
-    background-image: url("images/gatito.png");
+    background-image: url("images/gatito-removebg-preview.png");
 
     /* Si es una imagen PNG/JPG: */
     /* background-image: url('path/to/your/cat-face.png'); */
@@ -921,6 +921,278 @@ nav.scrolled {
 .timeline-content p {
     font-size: 14px;
     color: #666;
+}
+
+/* =========================================
+   Sección Adopción y Accesorios (Estilo Integrado)
+   ========================================= */
+
+#adopcion-accesorios {
+    padding: 120px 20px;
+    background: #fafafa;
+    /* Fondo ligeramente diferente para contraste */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Esto anula el estilo "flotante" del tema original solo para esta sección */
+#adopcion-accesorios .form-group label {
+    position: static !important;
+    /* Quita la posición absoluta */
+    display: block;
+    margin-bottom: 10px;
+    /* Espacio entre el título y la caja */
+    transform: none !important;
+    /* Evita que se mueva/anime */
+    top: auto;
+    left: auto;
+    opacity: 1;
+    /* Asegura que siempre sea visible */
+    font-size: 12px;
+    /* Mantiene el tamaño pequeño y elegante */
+    font-weight: 700;
+    /* Un poco más de peso para legibilidad */
+    color: #009aff;
+}
+
+/* Asegura que el contenedor del select tenga espacio suficiente */
+#adopcion-accesorios .form-group {
+    position: relative;
+    margin-bottom: 30px;
+    /* Un poco más de aire entre preguntas */
+}
+
+/* Decoración flotante similar al Hero */
+#adopcion-accesorios::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(0, 154, 255, 0.1);
+    transform: rotate(45deg);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Encabezado de la sección */
+.header-adopcion {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.header-adopcion h2 {
+    font-size: 48px;
+    font-weight: 100;
+    /* Estilo fino característico del sitio */
+    color: #009aff;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Línea decorativa bajo el título */
+.header-adopcion h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: #009aff;
+}
+
+.header-adopcion p {
+    font-size: 16px;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* Estilo de la lista ordenada */
+.header-adopcion ol {
+    text-align: left;
+    margin: 30px auto;
+    max-width: 600px;
+    padding-left: 20px;
+    color: #555;
+}
+
+.header-adopcion ol li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+/* =========================================
+   Grid de Tarjetas (Formularios)
+   ========================================= */
+.adopcion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas */
+    gap: 40px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.form-card {
+    background: #fff;
+    padding: 50px 40px;
+    border: 1px solid #e0e0e0;
+    /* Borde sutil inicial */
+    border-top: 4px solid #009aff;
+    /* Acento superior */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.form-card:hover {
+    transform: translateY(-10px);
+    border-color: #009aff;
+    /* Todo el borde se vuelve azul al pasar el mouse */
+    box-shadow: 0 15px 40px rgba(0, 154, 255, 0.15);
+}
+
+.form-card h3 {
+    font-size: 24px;
+    font-weight: 300;
+    color: #009aff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   Estilos de los Inputs y Selects
+   ========================================= */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #009aff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Personalización del Select */
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    /* Bordes cuadrados estilo minimal */
+    background-color: transparent;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    /* Quitar flecha por defecto en algunos navegadores */
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23009aff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 12px auto;
+}
+
+.form-group select:focus {
+    border-color: #009aff;
+    background-color: #ddf0fcee;
+    /* Azul muy claro al enfocar */
+}
+
+/* Caja de Detalles (Precio/Edad) */
+.details-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ddf0fcee;
+    /* Fondo azul claro del tema */
+    border-left: 2px solid #009aff;
+    opacity: 0.8;
+}
+
+.details-box p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.details-box span {
+    font-weight: 700;
+    color: #009aff;
+    font-size: 16px;
+}
+
+/* =========================================
+   Acción de Enviar
+   ========================================= */
+.submit-action {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #009aff;
+    /* Línea separadora */
+}
+
+.submit-action p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.submit-button {
+    padding: 18px 60px;
+    background: #009aff;
+    color: #fff;
+    border: 2px solid #009aff;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 600;
+}
+
+.submit-button:hover {
+    background: transparent;
+    color: #009aff;
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 0px rgba(0, 154, 255, 0.2);
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 768px) {
+    .adopcion-grid {
+        grid-template-columns: 1fr;
+        /* Una columna en móvil */
+        gap: 30px;
+    }
+
+    .header-adopcion h2 {
+        font-size: 36px;
+    }
+
+    .form-card {
+        padding: 30px 20px;
+    }
 }
 
 /* Values Grid */

@@ -138,18 +138,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-document.addEventListener('DOMContentLoaded', () => {
-    const p = document.getElementById('cuadradito1');
-
-    if (p) {
-        p.addEventListener('click', () => {
-            if (p.style.borderColor == 'rgb(0, 0, 0)') {
-                p.style.borderColor = 'rgb(0, 154, 255)'
-            }
-            else {
-                p.style.borderColor = 'rgb( 0, 0, 0)';
-            }
-        })
-    }
-
-})
